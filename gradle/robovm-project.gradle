@@ -1,0 +1,14 @@
+ext {
+    roboVMVersion = "2.3.3-SNAPSHOT"
+}
+apply plugin: 'robovm'
+
+robovm {
+    installDir = "target/robovm"
+}
+
+dependencies {
+    compile "com.mobidevelop.robovm:robovm-rt:${roboVMVersion}"
+    compile "com.mobidevelop.robovm:robovm-cocoatouch:${roboVMVersion}"
+    testCompile "junit:junit:4.12"
+}

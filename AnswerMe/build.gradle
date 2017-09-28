@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    }
+    dependencies {
+        classpath 'com.mobidevelop.robovm:robovm-gradle-plugin:2.3.3-SNAPSHOT'
+    }
+}
+
+project(":core") {
+    apply from: "../../gradle/basic-java.gradle"
+
+    dependencies {
+        compile "com.squareup.retrofit:retrofit:2.0.0-beta2"
+        compile "com.squareup.retrofit:converter-gson:2.0.0-beta2"
+        compile "com.google.code.gson:gson:2.3.1"
+    }
+}
+
+project(":sdk") {
+    apply from: "../../gradle/basic-java.gradle"
+    apply from: "../../gradle/robovm-project.gradle"
+
+    dependencies {
+        compile project(":core")
+    }
+
+}
+
