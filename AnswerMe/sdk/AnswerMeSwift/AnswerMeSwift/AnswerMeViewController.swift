@@ -9,11 +9,6 @@
 import UIKit
 import ObjectiveC
 
-@objc
-class AMCounterImpl : NSObject {
-    
-}
-
 class AnswerMeViewController: UIViewController {
     
     var sdk: AMAnswerMeSDK!;
