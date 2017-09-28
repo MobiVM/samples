@@ -27,5 +27,13 @@ project(":sdk") {
         compile project(":core")
     }
 
-}
+    task buildAnswerMeNatives (type: Exec) {
+        doFirst {
+            workingDir '.'
+            commandLine './build-native.sh'
+        }
+    }
+    build.dependsOn buildAnswerMeNatives
+    robovmInstall.dependsOn build
 
+}
