@@ -1,1 +1,3 @@
 includeBuild 'AnswerMe'
+
+include 'ios:helloworld'
