@@ -1,5 +1,5 @@
 ext {
-    roboVMVersion = "2.3.3-SNAPSHOT"
+    roboVMVersion = "2.3.10-SNAPSHOT"
 }
 apply plugin: 'robovm'
 
@@ -8,7 +8,7 @@ robovm {
 }
 
 dependencies {
-    compile "com.mobidevelop.robovm:robovm-rt:${roboVMVersion}"
-    compile "com.mobidevelop.robovm:robovm-cocoatouch:${roboVMVersion}"
+    implementation "com.mobidevelop.robovm:robovm-rt:${roboVMVersion}"
+    implementation "com.mobidevelop.robovm:robovm-cocoatouch:${roboVMVersion}"
     testCompile "junit:junit:4.12"
 }
